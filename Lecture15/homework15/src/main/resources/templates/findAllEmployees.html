@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Welcome<br>
+    <snap th:each="selectedEmp:${employees}">
+        <snap th:text="${selectedEmp}"></snap><br>
+
+    </snap>
+</h1>
+
+<h2>Add Employee</h2>
+<form action="/Employees", method="post">
+    Employee Name: <input type="text" name="id"> <br>
+    <button type="submit">Add this employee</button>
+</form>
+
+</body>
+</html>
